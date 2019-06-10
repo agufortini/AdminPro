@@ -1,0 +1,14 @@
+<h3>{{ stLeyenda }} - {{ progreso }}</h3>
+<div class="input-group">
+    <span class="input-group-btn">
+    <button (click)="cambiarValor(-5)" class="btn btn-primary" type="button">
+        <i class="mdi mdi-minus"></i>
+    </button>
+  </span>
+    <input id="txtProgreso" #txtProgress type="number" name="progreso" class="form-control" [(ngModel)]="progreso" (ngModelChange)="onChange($event)" minlength="1" maxlength="100">
+    <span class="input-group-btn">
+      <button (click)="cambiarValor(+5)" class="btn btn-primary" type="button">
+          <i class="mdi mdi-plus"></i>
+      </button>
+    </span>
+</div>
